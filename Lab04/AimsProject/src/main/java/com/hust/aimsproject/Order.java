@@ -11,17 +11,27 @@ package com.hust.aimsproject;
  */
 public class Order {
     public static final int MAX_NUMBERS_ORDERED = 3;
+    public static final int MAX_LIMITTED_ORDERED = 0;
     private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
+    private static int nbOrdered = 0;
     
-    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-        if (qtyOrdered >= MAX_NUMBERS_ORDERED) {
-            System.out.println("The order is almost full");
-        } else {
-            itemsOrdered[qtyOrdered++] = disc;
-            System.out.println("The disc has been added");
-        }
+    public Order() {
+        nbOrdered++;
+        Order.nbOrdered = nbOrdered;
     }
+    
+    public static boolean checknbOrdered() {
+        return nbOrdered < MAX_LIMITTED_ORDERED;
+    }
+//    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+//        if (qtyOrdered >= MAX_NUMBERS_ORDERED) {
+//            System.out.println("The order is almost full");
+//        } else {
+//            itemsOrdered[qtyOrdered++] = disc;
+//            System.out.println("The disc has been added");
+//        }
+//    }
     
     public void addDigitalVideoDisc(DigitalVideoDisc dvdList[]) {
         for (int i = 0; i < dvdList.length; i++) {
