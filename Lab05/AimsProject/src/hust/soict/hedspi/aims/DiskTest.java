@@ -32,6 +32,6 @@ public class DiskTest {
         System.out.println(dvd1.search("lion"));
         System.out.println(dvd1.search("lion King"));
 
-        anOrderTest.printOrderedWithoutLuckyItem();
+        anOrderTest.printOrderedHaveLuckyItem();
     }
 }

@@ -114,7 +114,7 @@ public class Order {
         return costWithFree;
     }
 
-    public void printOrderedWithoutLuckyItem() {
+    public void printOrderedHaveLuckyItem() {
         DigitalVideoDisc discLucky = getALuckyItem();
         int j = 1;
 
