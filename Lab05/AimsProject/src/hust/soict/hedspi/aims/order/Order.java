@@ -31,7 +31,7 @@ public class Order {
     }
 
 //    public int addDigitalVideoDisc(DigitalVideoDisc disc) {
-//        if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+//        if (qtyOrdered >= MAX_NUMBERS_ORDERED) {
 //            System.out.println("The order is almost full");
 //            return 0;
 //        } else {
@@ -44,7 +44,7 @@ public class Order {
     public int addDigitalVideoDisc(DigitalVideoDisc dvdList[]) {
         int check = 0;
         for (int i = 0; i < dvdList.length; i++) {
-            if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+            if (qtyOrdered >= MAX_NUMBERS_ORDERED) {
                 System.out.println("The order is almost full");
                 check = 0;
             } else {

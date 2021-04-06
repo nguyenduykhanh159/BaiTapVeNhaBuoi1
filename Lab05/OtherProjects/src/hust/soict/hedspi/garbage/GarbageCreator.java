@@ -19,8 +19,8 @@ public class GarbageCreator {
         for (int i = 0; i < Math.pow(2, 19); i++) {
             s += r.nextInt(2);
         }
-        System.out.println(s);
         System.out.println(System.currentTimeMillis() - start);
+        System.out.println(s);
         System.gc();
     }
 }
