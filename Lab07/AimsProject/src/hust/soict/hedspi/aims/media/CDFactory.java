@@ -23,8 +23,6 @@ public class CDFactory implements AbstractItemFactory{
         cd.setCategory(input.nextLine());
         System.out.print("Enter cost : ");
         cd.setCost(input.nextFloat());
-        System.out.print("Enter length : ");
-        cd.setLength(input.nextInt());
         input.nextLine();
         System.out.print("Enter director : ");
         cd.setDirector(input.nextLine());

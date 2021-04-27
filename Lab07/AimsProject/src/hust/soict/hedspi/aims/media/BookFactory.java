@@ -25,10 +25,11 @@ public class BookFactory implements AbstractItemFactory{
         book.setCost(input.nextFloat());
         System.out.print("Enter count of author : ");
         int count = input.nextInt();
+        input.nextLine();
         for (int i = 0; i < count; i++) {
-            input.nextLine();
             System.out.print("Enter author " + (i + 1) + " : ");
-            book.addAuthor(input.nextLine());
+            String authorString = input.nextLine();
+            book.addAuthor(authorString);
         }
         
         return book;
